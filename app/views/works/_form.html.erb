@@ -1,0 +1,37 @@
+<%= form_for(@work) do |f| %>
+  <% if @work.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@work.errors.count, "error") %> prohibited this work from being saved:</h2>
+
+      <ul>
+      <% @work.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :min_year %><br>
+    <%= f.number_field :min_year %>
+  </div>
+  <div class="field">
+    <%= f.label :max_year %><br>
+    <%= f.text_field :max_year %>
+  </div>
+  <div class="field">
+    <%= f.label :circa %><br>
+    <%= f.check_box :circa %>
+  </div>
+  <div class="field">
+    <%= f.label :place %><br>
+    <%= f.text_field :place %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

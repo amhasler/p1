@@ -1,0 +1,59 @@
+body {
+  background-color: $white;
+  font-family: $montserrat;
+  font-size: $font-size;
+}
+
+h1 {
+  font-family: $montserrat;
+  @include font-size(2.5);
+  color: $dark-gray;
+}
+
+h2 {
+  font-family: $montserrat;
+  @include font-size(1.5);
+  color: $dark-gray;
+}
+
+h3 {
+  font-family: $montserrat;
+  @include font-size(1);
+  color: $dark-gray;
+}
+
+h4 {
+  @include font-size(0.8125);
+  font-family: $montserrat;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid $light-gray;
+  margin: 60px auto;
+  width: 80%;
+}
+
+p {
+  line-height: 1.4em;
+  margin: 14px 0;
+  color: $dark-gray;
+}
+
+li {
+  color: $dark-gray;
+  line-height: 1.4em;
+}
+
+a, a:visited {
+  color: $light-blue;
+  text-decoration: none;
+  @include transition(all 0.15s linear);
+  cursor: pointer;
+  outline: 0;
+  &:hover { color: $dark-blue; }
+}
+
+button {
+  cursor: pointer;
+}

@@ -1,0 +1,7 @@
+/* Container */
+.container {
+  @include outer-container;
+  margin: auto;
+  @include clearfix;
+  @include box-sizing(border-box);
+}

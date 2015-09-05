@@ -1,0 +1,27 @@
+<p>
+  <strong>Title:</strong>
+  <%= @work.title %>
+</p>
+
+<p>
+  <strong>Min year:</strong>
+  <%= @work.min_year %>
+</p>
+
+<p>
+  <strong>Max year:</strong>
+  <%= @work.max_year %>
+</p>
+
+<p>
+  <strong>Circa:</strong>
+  <%= @work.circa %>
+</p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @work.place %>
+</p>
+
+<%= link_to 'Edit', edit_work_path(@work) %> |
+<%= link_to 'Back', works_path %>

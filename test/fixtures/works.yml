@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  min_year: 1
+  max_year: 
+  circa: false
+  place: MyString
+  decimal: 
+  decimal: 
+
+two:
+  title: MyString
+  min_year: 1
+  max_year: 
+  circa: false
+  place: MyString
+  decimal: 
+  decimal: 

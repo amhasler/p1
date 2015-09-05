@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Works</h1>
+
+<table>
+  <tbody>
+    <% @works.each do |work| %>
+      <tr>
+        <td><%= link_to work.title, work %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Work', new_work_path %>

@@ -1,0 +1,10 @@
+/* Fonts */
+$font-size: 10px;
+
+@mixin font-size($size, $unit: rem) {
+	font-size: $size + unquote($unit);
+
+	@if ($unit == "rem") {
+		.no-cssremunit & { font-size: rem-to-px($size); }
+	}
+}
