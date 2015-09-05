@@ -4,12 +4,14 @@ class WorksController < ApplicationController
   # GET /works
   # GET /works.json
   def index
+    @title = "The Canon - Page One"
     @works = Work.all
   end
 
   # GET /works/1
   # GET /works/1.json
   def show
+    work = Work.find(params[:id])
   end
 
   # GET /works/new

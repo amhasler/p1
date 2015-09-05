@@ -1,0 +1,78 @@
+"INFORMATION",,,,,,
+"number_works",,,,,,
+25,,,,,,
+"WORK",,,,,,
+"title","min_date","max_date","circa","place","latitude","longitude"
+"The Dome of the Rock",690,,true,"Jerusalem",31.770345,35.217416
+"WORK",,,,,,
+"title","min_date","max_date","circa","place","latitude","longitude"
+"Basilica of Constantius Chlorus",300,325,false,"Trier, Germany",49.752157,6.634010
+"WORK",,,,,,
+"title","min_date","max_date","circa","place","latitude","longitude"
+"Porta Marzia",-200,-100,false,"Perugia, Italy",43.103072,12.416617
+"WORK",,,,,,
+"title","min_date","max_date","circa","place","latitude","longitude"
+"Apollo",-510,,true,"Isola Farnese, Italy",42.016965,12.380540
+"WORK",,,,,,
+"title","min_date","max_date","circa","place","latitude","longitude"
+"The Akropolis",447,432,false,"Athens, Greece",37.971943,23.726456
+"WORK",,,,,,
+"title","min_date","max_date","circa","place","latitude","longitude"
+"Palace of Diocletian",300,275,false,"Spalato, Croatia",43.508627,16.441101
+"WORK",,,,,,
+"title","min_date","max_date","circa","place","latitude","longitude"
+"The Well of Moses",1395,1406,false,"Dijon, France",47.321642,5.042006
+"WORK",,,,,,
+"title","min_date","max_date","circa","place","latitude","longitude"
+"Altarpiece of Saint Clare",1280,,true,"Assisi, Italy",43.070635,12.619925
+"WORK",,,,,,
+"title","min_date","max_date","circa","place","latitude","longitude"
+"Saint Francis Preaching to the Birds",1290,1300,false,"Assisi, Italy",43.070635,12.619925
+"WORK",,,,,,
+"title","min_date","max_date","circa","place","latitude","longitude"
+"St. Michael's at Hildesheim",1001,1033,true,"Hildesheim, Germany",52.155414,9.955481
+"WORK",,,,,,
+"title","min_date","max_date","circa","place","latitude","longitude"
+"Godescalc Gospels",781,783,false,"Aachen, Germany",50.777485,6.090688
+"WORK",,,,,,
+"title","min_date","max_date","circa","place","latitude","longitude"
+"Cathedral of Saint-Lazare",1120,1132,true,"Autun, France",46.950608,4.299484
+"WORK",,,,,,
+"title","min_date","max_date","circa","place","latitude","longitude"
+"Cathedral of Santiago de Compostela",1075,1120,true,"Santiago de Compostela",42.877060,-8.544512
+"WORK",,,,,,
+"title","min_date","max_date","circa","place","latitude","longitude"
+"Moralia in Job",1111,,false,"Dijon, France",47.322805,5.040289
+"WORK",,,,,,
+"title","min_date","max_date","circa","place","latitude","longitude"
+"Gospel Book of Abbot Wedricus",1147,,true,"Nord-Pas-de-Calais, France",50.362867,3.068049
+"WORK",,,,,,
+"title","min_date","max_date","circa","place","latitude","longitude"
+"Notre-Dame-la-Grande",1100,1125,false,"Poitiers, France",46.582746,0.341429
+"WORK",,,,,,
+"title","min_date","max_date","circa","place","latitude","longitude"
+"Column of Trajan",109,,true,"Rome, Italy",41.904450,12.491023
+"WORK",,,,,,
+"title","min_date","max_date","circa","place","latitude","longitude"
+"Portrait of a Woman",110,130,true,"Fayum, Egypt",29.309475,30.844475
+"WORK",,,,,,
+"title","min_date","max_date","circa","place","latitude","longitude"
+"Mausoleum of Galla Placidia",425,450,false,"Ravenna, Italy",44.417110,12.213106
+"WORK",,,,,,
+"title","min_date","max_date","circa","place","latitude","longitude"
+"Anastasis at Kariye Camii",1310,1320,true,"Istanbul, Turkey",41.010503,28.977161
+"WORK",,,,,,
+"title","min_date","max_date","circa","place","latitude","longitude"
+"The Lindisfarne Gospels",700,,true,"Durham, England",54.774231,-1.584681
+"WORK",,,,,,
+"title","min_date","max_date","circa","place","latitude","longitude"
+"Portrait of Menander",70,,true,"Pompeii, Italy",40.746620,14.499261
+"WORK",,,,,,
+"title","min_date","max_date","circa","place","latitude","longitude"
+"Virgin of Essen",980,,true,"Essen, Germany",51.455224,7.013713
+"WORK",,,,,,
+"title","min_date","max_date","circa","place","latitude","longitude"
+"Salisbury Cathedral",1220,1265,false,"Salisbury, England",51.068602,-1.792121
+"WORK",,,,,,
+"title","min_date","max_date","circa","place","latitude","longitude"
+"Madonna Enthroned",1280,1290,true,"Florence, Italy",43.770290,11.256932

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150905182127) do
+ActiveRecord::Schema.define(version: 20150905194458) do
 
   create_table "media_objects", force: :cascade do |t|
     t.string   "image"
@@ -81,6 +81,7 @@ ActiveRecord::Schema.define(version: 20150905182127) do
     t.decimal  "longitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "why"
   end
 
 end

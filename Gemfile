@@ -12,6 +12,7 @@ gem 'jquery-rails', '4.0.3'
 gem 'turbolinks',   '2.3.0'
 gem 'jbuilder',     '2.2.3'
 gem 'devise'
+gem 'geocoder'
 gem 'acts-as-taggable-on', '~> 3.4'
 gem 'sdoc',         '0.4.0', group: :doc
 # Assets and media
