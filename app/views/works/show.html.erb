@@ -1,5 +1,7 @@
+<% if @work.featured_image %>
+  <%= image_tag @work.featured_image.image.url.to_s %>
+<% end %>
 
-<%= image_tag @work.featured_image.image.url.to_s %>
 <p>
   <strong>Title:</strong>
   <%= @work.title %>
@@ -36,7 +38,12 @@
 </p>
 
 <% @work.media_objects.each do |mo| %>
-  <%= image_tag mo.image.url.to_s %>
+  <% if mo.image? %>
+    <%= image_tag mo.image.url.to_s %>
+  <% elsif mo.video? %>
+    <iframe width="420" height="315" src= <%= mo.video %> frameborder="0" allowfullscreen></iframe>
+  <% end %>   
+  <%= mo.caption %>
 <% end %>
   
 
