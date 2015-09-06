@@ -1,0 +1,62 @@
+.filter {
+	position:absolute;
+	width:100%;
+	.wrap {
+		background-color: $dark-blue;
+		display:none;
+	}
+	.filter-inner {
+		padding: 40px 100px;
+		max-width: 940px;
+		margin:0px auto;
+	}
+	#filter-button {
+		background-color: $dark-blue;
+		padding:3px 10px;
+		width:80px;
+		position:relative;
+		left:750px;
+		cursor: pointer;
+		margin-top:-2px;
+		p {
+			margin:0px;
+			text-align:center;
+			text-transform:uppercase;
+			color:#ffffff;
+		}
+	}
+}
+
+.new-work {
+	background-color: $light-gray;
+	border-bottom: 1px solid #000;
+	.wrap {
+		max-width:960px;
+		margin:0px auto;
+		text-align: center;
+		width:100%;
+		padding: 20px 0px;
+	}
+}
+
+.index {
+	&.site-inner {
+		margin-top: 60px;
+	}
+
+	text-align: center;
+
+	h1 {
+		margin-bottom:40px;
+	}
+	h2 {
+		margin-bottom:20px;
+	}
+
+	a {
+		color:$dark-gray;
+		&:hover {
+			color:$light-blue;
+		}
+	}
+}

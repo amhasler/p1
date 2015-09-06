@@ -6,12 +6,36 @@ class WorksController < ApplicationController
   def index
     @title = "The Canon - Page One"
     @works = Work.all
+
+    if params[:tags] && !params[:tags].empty?
+      @tags = params[:tags].split(', ');
+      @tags.each do |t|
+        if Work.search(t).count > 0
+          @tags.delete_at(@tags.find_index(t))
+          @works = Work.search(t)
+          @query = t
+        end   
+      end
+      if !@tags.empty?
+        @works = @works.tagged_with(@tags)
+      end
+      if @query 
+        @tags << @query
+      end
+      @tags = @tags.join(', ')
+    end
+
+    respond_to do |format|
+      format.html { render 'index'}
+      format.json { render json: @works }
+    end
   end
 
   # GET /works/1
   # GET /works/1.json
   def show
-    work = Work.find(params[:id])
+    @work = Work.find(params[:id])
+    @title = "#{@work.title} - Page One"
   end
 
   # GET /works/new

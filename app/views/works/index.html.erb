@@ -1,15 +1,42 @@
-<h1>Listing Works</h1>
+<% if user_signed_in? %>
+	<div class="new-work">
+		<div class="wrap">
+			<h3>Got another work? <%= link_to 'Click here to add it', new_work_path %>.</h3>
+		</div>
+	</div>
+<% end %>
 
-<table>
-  <tbody>
-    <% @works.each do |work| %>
-      <tr>
-        <td><%= link_to work.title, work %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="container filter">
+	<div class="wrap">
+		<div class="filter-inner">
+			<%= form_for :artobject, url: { :action => "index" }, html: { method: :get } do |f| %>
+			  <%= text_field_tag :tags, @tags ? @tags : nil, placeholder: "Separate search terms by comma" %>
+			  <%= f.submit "Submit" %>
+			  <%= link_to "Reset", works_path %>
+			<% end %>
+		</div>
+	</div>
+	<div id="filter-button">
+		<p>Filter</p>
+	</div>
+</div>
 
-<br>
+<div class="container site-inner index">	
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
+	
+	<h1>The Western Canon</h1>
 
-<%= link_to 'New Work', new_work_path %>
+	<% @works.each do |work| %>
+		<% if work.is_title %>
+	  	<h2><i><%= link_to work.title, work %><i></h2>
+	  <% else %>
+	  	<h2><%= link_to work.title, work %></h2>
+	  <% end %>
+	<% end %>
+
+	<br>
+
+	
+	<div class="push"></div>
+</div>

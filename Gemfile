@@ -13,11 +13,12 @@ gem 'turbolinks',   '2.3.0'
 gem 'jbuilder',     '2.2.3'
 gem 'devise'
 gem 'geocoder'
+gem "font-awesome-rails"
 gem 'acts-as-taggable-on', '~> 3.4'
 gem 'sdoc',         '0.4.0', group: :doc
 # Assets and media
 gem 'carrierwave'
-gem 'rmagick', require: false
+gem 'rmagick'
 gem 'mime-types'
 gem 'fog'
 # Synchronize assets with S3
@@ -27,7 +28,7 @@ group :development, :test do
   gem 'sqlite3',     '1.3.9'
   gem 'byebug',      '3.4.0'
   gem 'web-console', '2.0.0.beta3'
-  gem 'spring',      '1.1.3'
+  # gem 'spring',      '1.1.3'
 end
 
 group :production do

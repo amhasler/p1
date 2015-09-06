@@ -13,10 +13,14 @@ class Work < ActiveRecord::Base
 	validates :min_year, presence: true, length: { maximum: 4}
 	validates :place, presence: true
 
-	default_scope -> { order('created_at DESC') }
+	default_scope -> { order('created_at ASC') }
 
 	def featured_image
 		return self.media_objects.where(featured: true).first
+	end
+
+	def self.search(query)
+	  where("lower(title) LIKE ?", "%#{query.downcase}%") 
 	end
 
 end

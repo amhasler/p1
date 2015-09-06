@@ -1,0 +1,20 @@
+<header>
+	<div class="container">
+		<div class="title-area">
+			<a id="logo">page one</a>
+		</div>
+		<nav>
+			<ul>
+				<li><a id="canon">the canon</a></li>
+				<li><a>about</a></li>
+				<li><a>blog</a></li>
+				<li><a>contact</a></li>
+				<% if user_signed_in? %>
+	  			<li>
+	  				<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+	  			</li>
+  			<% end %>
+			</ul>
+		</nav>
+	</div>
+</header>

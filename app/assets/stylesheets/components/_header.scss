@@ -1,0 +1,42 @@
+header {
+	border-bottom: 1px solid #000;
+	height:70px;
+	.container {
+		max-width: 940px;
+		margin:0px auto;
+	}
+
+	.title-area {
+		padding: 20px 0;
+    float:left;
+	}
+
+	a {
+		color: #58585b;
+		text-transform: uppercase;
+	}
+
+	#canon {
+		color:$light-blue;
+	}
+
+	a:hover {
+		color:$light-blue;
+	}
+
+	#logo {
+		font-size: 30px;
+	}
+
+	nav {
+		float:right;
+		padding: 27px 0px;
+		li {
+			display: inline-block;
+    	text-align: left;
+    	a {
+    		padding: 0px 20px;
+    	}
+		}
+	}
+}

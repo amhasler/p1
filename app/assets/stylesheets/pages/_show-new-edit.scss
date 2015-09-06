@@ -1,0 +1,52 @@
+.show {
+	&.site-inner {
+		margin-top:40px;
+	}
+	.breadcrumb-container {
+		@include span-columns(12);
+		p, i {
+			display: inline-block;
+		}
+		i {
+			margin:0px 20px;
+		}
+	}
+	.hero {
+		.image {
+			@include span-columns(8);
+			@include shift(2);
+			margin-top: 40px;
+			margin-bottom: 20px;
+			img {
+				width:100%;
+				border-image: url('//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/frame.png') 45 45 45 45 stretch stretch;
+			  border-color: #000;
+			  border-style: inset;
+			  border-width: 40px;
+			}
+		}
+		h2,h3 {
+			clear:both;
+			text-align:center;
+		}
+	}
+	.content-row {
+		margin: 60px 0px;
+		.why {
+			@include span-columns(8);
+			border-right:1px solid $light-gray;
+		}
+		.tags {
+			@include span-columns(4);
+			p {
+				text-decoration: underline;
+				margin:5px 0px;
+			}
+			a {
+				background-color:$dark-blue;
+				color:#fff;
+				padding:2px 4px 4px;
+			}
+		}
+	}
+}

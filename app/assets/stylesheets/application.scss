@@ -8,6 +8,7 @@
 @import "grid_settings";
 @import "neat";
 @import "reset";
+@import "font-awesome";
 
 /* Library */
 @import "mixins";
@@ -17,3 +18,11 @@
 /* Generic */
 @import "generic";
 @import "form";
+
+/* Components */
+@import "components/header";
+@import "components/footer";
+
+/* Pages */
+@import "pages/index";
+@import "pages/show-new-edit";

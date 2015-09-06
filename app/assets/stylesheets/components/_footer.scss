@@ -1,0 +1,29 @@
+footer {
+  background-color: #000;
+  padding: 20px 0;
+  text-align: center;
+
+  nav {
+  	padding: 20px 0;
+  	li {
+  		display: inline-block;
+  	}
+  	a {
+  		text-transform: uppercase;
+  		color:$dark-gray;
+  		margin: 0 20px;
+  	}
+  }
+
+  p {
+  	color: #ffffff;
+  	font-size: 12px;
+  	text-transform: uppercase;
+  	a {
+  		color:#fff;
+  	}
+  }
+  a:hover, #footer-canon {
+  	color:$light-blue;
+  }
+}

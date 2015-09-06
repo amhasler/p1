@@ -1,51 +1,88 @@
-<% if @work.featured_image %>
-  <%= image_tag @work.featured_image.image.url.to_s %>
+<% if user_signed_in? %>
+  <div class="new-work">
+    <div class="wrap">
+      <p>Want to change something? <%= link_to 'Click here to edit this work', edit_work_path(@work) %>.</p>
+    </div>
+  </div>
 <% end %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @work.title %>
-</p>
+<div class="container site-inner show">  
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 
-<p>
-  <strong>Min year:</strong>
-  <%= @work.min_year %>
-</p>
+  <div class="breadcrumb-container">
+    <p><%= link_to 'The Western Canon', works_path %></p><i class="fa fa-angle-right"></i><p><%= @work.title %></p>
+  </div>
+  <div class="hero">
+    <div class="image">
+      <% if @work.featured_image %>
+        <%= image_tag @work.featured_image.image.url.to_s %>
+      <% end %>
+    </div>
+    <h2><%= @work.title %></h2>
+    <h3><%= happy_date(@work.min_year,@work.max_year,@work.circa) %></h3>
+  </div>
 
-<p>
-  <strong>Max year:</strong>
-  <%= @work.max_year %>
-</p>
+  <div class="content-row">
+    <div class="why">
+      <h4>Why is it canonical?</h4>
+      <p><%= @work.why %></p>
+    </div>
+    <div class="tags">
+      <div class="tag-container">
+        <p>Creators</p>
+        <% if @work.creator_list.count > 0 %>
+          <% @work.creator_list.each do |t| %>
+            <%= link_to t, works_path(params.merge(:tags =>  t)) %>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="tag-container">
+        
+        <% if @work.location_list.count > 0 %>
+          <% @work.location_list.each do |t| %>
+            <p>Locations</p>
+            <%= link_to t, works_path(params.merge(:tags =>  t)) %>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="tag-container">
+        <% if @work.language_list.count > 0 %>
+          <p>Languages</p>
+          <% @work.language_list.each do |t| %>
+            <%= link_to t, works_path(params.merge(:tags =>  t)) %>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="tag-container">
+        <% if @work.period_list.count > 0 %>
+          <p>Periods</p>
+          <% @work.period_list.each do |t| %>
+            <%= link_to t, works_path(params.merge(:tags =>  t)) %>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="tag-container">
+        <% if @work.medium_list.count > 0 %>
+          <p>Media</p>
+          <% @work.medium_list.each do |t| %>
+            <%= link_to t, works_path(params.merge(:tags =>  t)) %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
-<p>
-  <strong>Circa:</strong>
-  <%= @work.circa %>
-</p>
+  <% @work.media_objects.each do |mo| %>
+    <% if mo.image? %>
+      <%= image_tag mo.image.url.to_s %>
+    <% elsif mo.video? %>
+      <%= image_tag "http://img.youtube.com/vi/#{mo.video}/0.jpg" %>
+      <iframe width="420" height="315" src=<%= "https://www.youtube.com/embed/#{mo.video}" %> frameborder="0" allowfullscreen></iframe>
+    <% end %>   
+    <%= mo.caption %>
+  <% end %>
+    
 
-<p>
-  <strong>Place:</strong>
-  <%= @work.place %>
-</p>
-
-<p>
-  <strong>Latitude:</strong>
-  <%= @work.latitude %>
-</p>
-
-<p>
-  <strong>Longitude:</strong>
-  <%= @work.longitude %>
-</p>
-
-<% @work.media_objects.each do |mo| %>
-  <% if mo.image? %>
-    <%= image_tag mo.image.url.to_s %>
-  <% elsif mo.video? %>
-    <iframe width="420" height="315" src= <%= mo.video %> frameborder="0" allowfullscreen></iframe>
-  <% end %>   
-  <%= mo.caption %>
-<% end %>
+   |
   
-
-<%= link_to 'Edit', edit_work_path(@work) %> |
-<%= link_to 'Back', works_path %>
