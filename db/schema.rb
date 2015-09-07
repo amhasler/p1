@@ -11,18 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150906161826) do
+ActiveRecord::Schema.define(version: 20150907145221) do
 
-  create_table "media_objects", force: :cascade do |t|
-    t.string   "image"
-    t.string   "caption"
-    t.string   "video"
-    t.string   "content_type"
-    t.boolean  "featured"
-    t.integer  "work_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
+# Could not dump table "media_objects" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "resource_objects", force: :cascade do |t|
     t.string   "title"

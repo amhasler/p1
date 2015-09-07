@@ -79,6 +79,8 @@ GEM
     erubis (2.7.0)
     excon (0.45.3)
     execjs (2.6.0)
+    fancybox-rails (0.3.0)
+      railties (>= 3.1.0)
     fog (1.23.0)
       fog-brightbox
       fog-core (~> 1.23)
@@ -226,6 +228,7 @@ DEPENDENCIES
   carrierwave
   coffee-rails (= 4.1.0)
   devise
+  fancybox-rails
   fog
   font-awesome-rails
   geocoder

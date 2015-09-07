@@ -6,3 +6,6 @@ jQuery ->
 
 	$('#filter-button').click ->
 		$('.filter .wrap').slideToggle('slow');
+
+
+	$('a.fancybox-image').fancybox()

@@ -73,16 +73,32 @@
     </div>
   </div>
 
-  <% @work.media_objects.each do |mo| %>
-    <% if mo.image? %>
-      <%= image_tag mo.image.url.to_s %>
-    <% elsif mo.video? %>
-      <%= image_tag "http://img.youtube.com/vi/#{mo.video}/0.jpg" %>
-      <iframe width="420" height="315" src=<%= "https://www.youtube.com/embed/#{mo.video}" %> frameborder="0" allowfullscreen></iframe>
-    <% end %>   
-    <%= mo.caption %>
-  <% end %>
-    
+  <div class="media-row">
+    <h3>Images and Videos</h3>
+    <% @work.media_objects.each do |mo| %>
+      <div class="media-container">
+        <% if mo.image? %>
+          <a class="fancybox-image" href=<%= mo.image.url.to_s %>><%= image_tag mo.image.url.to_s %></a>
+        <% elsif mo.video? %>
+          <a class="fancybox-video" href=<%= "http://www.youtube.com/watch?v=#{mo.video}?fs=1&amp;autoplay=1" %>><%= image_tag "http://img.youtube.com/vi/#{mo.video}/0.jpg" %></a>
+        <% end %>   
+        <p><i><%= mo.caption %></i></p>
+      </div>
+    <% end %>
+  </div>
+  <div class="resources-row">
+    <h3>Resources</h3>
+    <% @work.resource_objects.each do |ro| %>
+      <div class="resource">
+        <div class="link-title">
+          <a href=<%= ro.link %> target="_blank"><%= ro.title %></a>
+        </div>
+        <div class="description">
+          <p><%= ro.description %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
 
-   |
-  
+  <div class="push"></div>
+</div>
