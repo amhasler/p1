@@ -38,13 +38,6 @@ h4 {
   font-family: $montserrat;
 }
 
-hr {
-  border: none;
-  border-top: 1px solid $light-gray;
-  margin: 60px auto;
-  width: 80%;
-}
-
 p {
   line-height: 1.4em;
   margin: 14px 0;
@@ -54,6 +47,13 @@ p {
 li {
   color: $dark-gray;
   line-height: 1.4em;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid $light-gray;
+  margin: 60px auto;
+  width: 80%;
 }
 
 a, a:visited {

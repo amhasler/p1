@@ -9,3 +9,7 @@ jQuery ->
 
 
 	$('a.fancybox-image').fancybox()
+
+	input = document.getElementById('search')
+
+	autocomplete = new google.maps.places.Autocomplete(input);

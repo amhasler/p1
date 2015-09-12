@@ -3,6 +3,38 @@ $white: #ffffff;
 $dark-gray: #58585b;
 $mid-gray: #848487;
 $light-gray: #d6d6da;
+$verylightgrey: #F4F4F4;
+$grey-athens: #E4E4E4;
+$grey-whitesmoke: #EEEEEE;
+$grey-gainsboro: #DDDDDD;
+$lightgrey: #D4D4D4;
+$grey-iron: #CCCCCC;
+$fontlightgrey: #AAAAAA;
+$midlightgrey: #878787;
+$grey-dimgray: #666666;
+$grey: $grey-dimgray;
+$grey-bleachedcedar: #444444;
+$darkgrey: $grey-bleachedcedar;
 
 $light-blue: #44ace8;
 $dark-blue: #0b437a;
+$blue-malibu: #1F9FCE;
+
+$red: #ff0000;
+$red-crimson: #EC1F4F;
+$red-crimson-background: lighten($red-crimson, 44%);
+$red-azalea: #F3BFB7;
+$red-bridesmaid: #FFF2F2;
+$red-pippin: #F7DBD3;
+$red-flamingo: #DC4D29;
+$red-tomato: #DE4831;
+
+$green: #88C057;
+$green-limegreen: #3CC711;
+$green-australianmint: #CAF9BB;
+$green-snowymint: #D5E9C4;
+$pastelgreen: #E2F3D3;
+$fontpastelgreen: darken(saturate($green, 10%), 5%);
+$green-christi: #6DA805;
+$green-saltpan: #F0F7EA;
+$green-snowflurry: #D7E7BA;

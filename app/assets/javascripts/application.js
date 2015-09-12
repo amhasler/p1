@@ -13,5 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+
+//==== Vendor ====
+//= require bootstrap-fileupload
 //= require fancybox
+
 //= require_tree .

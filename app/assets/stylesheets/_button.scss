@@ -1,0 +1,87 @@
+$button-padding-vertical: 6px;
+$button-padding-horizontal: 10px;
+$button-border-radius: 3px;
+
+.button {
+  font-family: $montserrat;
+  background-color: transparent;
+  @include font-size(0.875);
+  cursor: pointer;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: $button-border-radius;
+  line-height: 1.5em;
+  padding: 8px;
+  @include box-sizing(border-box);
+  @include inline-block;
+  text-align: center;
+  text-decoration: none;
+  &[disabled] { cursor: auto; }
+  &::-moz-focus-inner { border: 0; }
+}
+
+@mixin button($color: grey) {
+  @include transition(all $fast-hover-animation-speed);
+
+  @if $color == grey {
+    color: $midlightgrey;
+    border-color: $grey-iron;
+    &:hover, &:focus, &:active {
+      color: darken($midlightgrey, 15%);
+      border-color: darken($grey-iron, 15%);
+    }
+    // &.active { box-shadow: inset 0 0 3px $grey-iron; }
+  } @else if $color == blue {
+    color: #fff;
+    background-color: $light-blue;
+    border-color: $blue-malibu;
+    &:hover, &:focus, &:active {
+      color: darken($dark-blue, 5%);
+      border-color: darken($blue-malibu, 5%);
+    }
+    // &.active { box-shadow: inset 0 0 3px #259ed3; }
+    &[disabled] {
+      color: $midlightgrey;
+      border-color: $grey-iron;
+    }
+  } @else if $color == green {
+    color: $green-christi;
+    border-color: $green-snowflurry;
+    // &.active { box-shadow: inset 0 0 3px $green-snowflurry; }
+  } @else if $color == red {
+    color: $red-flamingo;
+    border-color: $red-tomato;
+    &:hover, &:focus, &:active {
+      color: darken($red-flamingo, 5%);
+      border-color: darken($red-tomato, 5%);
+    }
+    // &.active { box-shadow: inset 0 0 3px $red-tomato; }
+  }
+}
+
+%rounded-button {
+  @extend .button-grey;
+
+  padding: 0 0.75em;
+  border-radius: 100px;
+}
+
+.button-blue {
+  @extend .button;
+  @include button(blue);
+}
+
+.button-grey {
+  @extend .button;
+  @include button(grey);
+}
+
+.button-red {
+  @extend .button;
+  @include button(red);
+}
+
+.button-green {
+  @extend .button;
+  @include button(green);
+}

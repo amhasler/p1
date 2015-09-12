@@ -1,0 +1,44 @@
+$input-height: 40px;
+
+#{$all-text-inputs}, textarea {
+  border: 1px solid $light-gray;
+  border-radius: 4px;
+  color: $dark-gray;
+  line-height: 2.5em;
+  @include font-size(0.9375);
+  @include box-sizing(border-box);
+  @include appearance(none);
+  @include transition(all $hover-animation-speed);
+  &[disabled] { background-color: $light-gray; }
+  @include placeholder {
+    @include transition(all $fast-hover-animation-speed);
+    font-family: $montserrat;
+    font-style: italic;
+    color: $mid-gray;
+    @include font-size(0.875);
+  }
+}
+#{$all-text-inputs} {
+  height: $input-height;
+  padding: 0 14px;
+  &:focus, &:active { border-color: $light-blue; }
+}
+textarea {
+  padding: 10px 14px;
+  font-family: $montserrat;
+  position: relative;
+  resize: none;
+}
+input[type="submit"] {
+  @extend .button-blue;
+  padding: 7px 15px;
+  outline: 0;
+  &[disabled] {
+    @include button(gray);
+  }
+}
+
+label {
+  color: $dark-gray;
+  line-height: $input-height;
+}

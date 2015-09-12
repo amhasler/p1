@@ -24,14 +24,17 @@
     <%= f.text_field :max_year %>
   </div>
   <div class="field">
-    <%= f.label :circa %><br>
-    <%= f.check_box :circa %>
+    <%= f.label :circa %>
+    <%= f.check_box :circa, class: "checkbox"  %>
   </div>
   <div class="field">
     <%= f.label :place %><br>
-    <%= f.text_field :place %>
+    <%= f.text_field :place, id: "search" %>
   </div>
+  <br />
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "button button-blue" %>
+    <%= link_to 'Cancel', works_path %>
   </div>
+  <br />
 <% end %>
