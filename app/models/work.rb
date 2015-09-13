@@ -10,7 +10,7 @@ class Work < ActiveRecord::Base
 	has_many :resource_objects
 
 	validates :title, presence: true, length: { maximum: 40 }
-	validates :min_year, presence: true, length: { maximum: 4}
+	validates :min_year, presence: true, length: { maximum: 5}
 	validates :place, presence: true
 
 	default_scope -> { order('created_at ASC') }

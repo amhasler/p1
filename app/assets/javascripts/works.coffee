@@ -10,6 +10,10 @@ jQuery ->
 
 	$('a.fancybox-image').fancybox()
 
-	input = document.getElementById('search')
+	input1 = document.getElementById('search-new');
 
-	autocomplete = new google.maps.places.Autocomplete(input);
+	autocomplete1 = new google.maps.places.Autocomplete(input1);
+
+	input2 = document.getElementById('search-edit');
+
+	autocomplete2 = new google.maps.places.Autocomplete(input2);
