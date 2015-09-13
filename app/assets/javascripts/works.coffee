@@ -13,7 +13,3 @@ jQuery ->
 	input1 = document.getElementById('search-new');
 
 	autocomplete1 = new google.maps.places.Autocomplete(input1);
-
-	input2 = document.getElementById('search-edit');
-
-	autocomplete2 = new google.maps.places.Autocomplete(input2);
