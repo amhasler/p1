@@ -30,8 +30,8 @@
     </div>
     <div class="tags">
       <div class="tag-container">
-        <p>Creators</p>
         <% if @work.creator_list.count > 0 %>
+          <p>Creators</p>
           <% @work.creator_list.each do |t| %>
             <%= link_to t, works_path(params.merge(:tags =>  t)) %>
           <% end %>
@@ -40,8 +40,8 @@
       <div class="tag-container">
         
         <% if @work.location_list.count > 0 %>
+          <p>Locations</p>
           <% @work.location_list.each do |t| %>
-            <p>Locations</p>
             <%= link_to t, works_path(params.merge(:tags =>  t)) %>
           <% end %>
         <% end %>
@@ -86,6 +86,7 @@
       </div>
     <% end %>
   </div>
+
   <div class="resources-row">
     <h3>Resources</h3>
     <% @work.resource_objects.each do |ro| %>

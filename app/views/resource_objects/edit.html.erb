@@ -1,0 +1,28 @@
+<div class="container site-inner show">  
+	
+	<%= form_for @resource_object do |f| %>
+		<div class="field">
+			<%= f.label :title %><br>
+			<%= f.text_field :title %>
+		</div>
+
+		<div class="field">
+			<%= f.label :link %><br>
+			<%= f.text_field :link %>
+		</div>
+
+	  <div class="field">
+	    <%= f.label :description %><br>
+	    <%= f.text_area :description %>
+	  </div>
+
+	  <div class="actions">
+	    <%= f.submit "Update", class: "button button-blue" %>
+	    <%= link_to 'Cancel', edit_work_path(@work) %> | 
+	    <%= link_to 'Delete', @resource_object, :method => :delete, :confirm => "You sure?" %>
+	  </div>
+
+	<% end %>
+
+	<div class="push"></div>
+</div>

@@ -1,5 +1,6 @@
 class WorksController < ApplicationController
   before_action :set_work, only: [:show, :edit, :update, :destroy]
+  before_action :signed_in_user, only: [:new, :create, :edit, :update, :destroy]
 
   # GET /works
   # GET /works.json
@@ -54,7 +55,7 @@ class WorksController < ApplicationController
 
     respond_to do |format|
       if @work.save
-        format.html { redirect_to @work, notice: 'Work was successfully created.' }
+        format.html { redirect_to edit_work_path(@work), notice: 'Work was successfully created.' }
         format.json { render :show, status: :created, location: @work }
       else
         format.html { render :new }
@@ -95,6 +96,17 @@ class WorksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def work_params
-      params.require(:work).permit(:title, :min_year, :max_year, :circa, :place, :decimal, :decimal)
+      params.require(:work).permit(:title, :min_year, :max_year, :circa, :place, :latitude, 
+        :longitude, :creator_list, :location_list, :language_list, :period_list, :medium_list, :why)
+    end
+
+    def signed_in_user
+      unless signed_in?
+        redirect_to new_user_session_path, notice: "Please sign in."
+      end
+    end
+
+    def signed_in?
+      !current_user.nil?
     end
 end

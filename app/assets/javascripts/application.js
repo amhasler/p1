@@ -15,7 +15,6 @@
 //= require turbolinks
 
 //==== Vendor ====
-//= require bootstrap-fileupload
 //= require fancybox
 
 //= require_tree .

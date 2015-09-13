@@ -1,6 +1,117 @@
-<h1>Editing Work</h1>
+<%= form_for(@work) do |f| %>
 
-<%= render 'form' %>
+  <div class="container site-inner show edit">
+  	<% if @work.errors.any? %>
+		  <div id="error_explanation">
+	      <h2><%= pluralize(@work.errors.count, "error") %> prohibited this work from being saved:</h2>
 
-<%= link_to 'Show', @work %> |
-<%= link_to 'Back', works_path %>
+	      <ul>
+	      <% @work.errors.full_messages.each do |message| %>
+	        <li><%= message %></li>
+	      <% end %>
+	      </ul>
+	    </div>
+	  <% end %>
+
+		<div class="breadcrumb-container">
+	    <p><%= link_to 'The Western Canon', works_path %></p><i class="fa fa-angle-right"></i><p><%= @work.title %></p>
+	  </div>
+	  <div class="hero">
+	    <div class="image">
+	      <% if @work.featured_image %>
+	        <%= image_tag @work.featured_image.image.url.to_s %>
+	      <% end %>
+	    </div>
+	    <div class="fields">
+		    <%= f.text_field :title, class: "full" %>
+		    <br /> 
+
+		    <%= f.number_field :min_year, placeholder: "min year" %>
+
+		    <%= f.text_field :max_year, placeholder: "max year" %>
+
+		    <%= f.label :circa %>
+		    <%= f.check_box :circa, class: "checkbox"  %>
+		    <br />
+		    <%= f.text_field :place, placeholder: "place", id:"search", class: "full" %>
+		   </div>
+  	</div>
+
+	  <div class="content-row">
+	    <div class="why">
+	      <h4>Why is it canonical?</h4>
+	      <%= f.text_area :why %>
+	    </div>
+	    <div class="tags">
+	      <div class="tag-container">
+        	<p>Creators</p>
+  				<%= f.text_field :creator_list, value: @work.send("creator_list").to_s %>
+	      </div>
+	      <div class="tag-container">
+          <p>Locations</p>
+          <%= f.text_field :location_list, value: @work.send("location_list").to_s %>
+	      </div>
+	      <div class="tag-container">
+	        <p>Languages</p>
+          <%= f.text_field :language_list, value: @work.send("language_list").to_s %>
+	      </div>
+	      <div class="tag-container">
+	        <p>Periods</p>
+          <%= f.text_field :period_list, value: @work.send("period_list").to_s %>
+	      </div>
+	      <div class="tag-container">
+	        <p>Media</p>
+          <%= f.text_field :medium_list, value: @work.send("medium_list").to_s %>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="media-row">
+	    <h3>Images and Videos</h3>
+	    <div class="new-object">
+		    <div class="wrap">
+		      <p>New media object? <%= link_to "Click here", new_media_object_path(:work_id => @work.id) %>.</p>
+		    </div>
+	   	</div>
+	    <% @work.media_objects.each do |mo| %>
+	      <div class="media-container">
+	        <% if mo.image? %>
+	          <a class="fancybox-image" href=<%= mo.image.url.to_s %>><%= image_tag mo.image.url.to_s %></a>
+	        <% elsif mo.video? %>
+	          <a class="fancybox-video" href=<%= "http://www.youtube.com/watch?v=#{mo.video}?fs=1&amp;autoplay=1" %>><%= image_tag "http://img.youtube.com/vi/#{mo.video}/0.jpg" %></a>
+	        <% end %>   
+	        <p><i><%= mo.caption %></i></p>
+	        <%= link_to 'Edit media', edit_media_object_path(mo, :work_id => @work.id) %>
+	      </div>
+	    <% end %>
+	  </div>
+	  <div class="resources-row">
+	    <h3>Resources</h3>
+	    <div class="new-object">
+		    <div class="wrap">
+		      <p>New resource object? <%= link_to "Click here", new_resource_object_path(:work_id => @work.id) %>.</p>
+		    </div>
+	   	</div>
+	    <% @work.resource_objects.each do |ro| %>
+	      <div class="resource">
+	        <div class="link-title">
+	          <a href=<%= ro.link %> target="_blank"><%= ro.title %></a>
+	        </div>
+	        <div class="description">
+	          <p><%= ro.description %></p>
+	          <%= link_to 'Edit resource', edit_resource_object_path(ro, :work_id => @work.id) %>
+	        </div>
+	      </div>
+	    <% end %>
+	  </div>
+
+	  <div class="push"></div>
+	</div>
+	<div class="new-work">
+    <div class="wrap">
+      <p>All done? <%= f.submit class: "button button-blue" %>
+    <%= link_to 'Cancel', works_path %></p>
+    </div>
+  </div>	   
+
+<% end %>

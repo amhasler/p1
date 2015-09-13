@@ -9,6 +9,9 @@
 		padding: 40px 100px;
 		max-width: 940px;
 		margin:0px auto;
+		input[type="text"] {
+			width:75%;
+		}
 	}
 	#filter-button {
 		background-color: $dark-blue;

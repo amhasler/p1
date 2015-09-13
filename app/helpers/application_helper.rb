@@ -12,14 +12,14 @@ module ApplicationHelper
   	end
   	if min_date < 0
   		date = min_date*-1
-  		total = total + date.to_s + "BCE"
+  		total = total + date.to_s + " BCE"
   	else
   		total = total + min_date.to_s 
   	end
   	if max_date
   		if max_date < 0
   			date = max_date*-1
-  			total = total + " - " + date.to_s  + "BCE"
+  			total = total + " - " + date.to_s  + " BCE"
   		else
   			total = total + " - " + max_date.to_s 
   		end

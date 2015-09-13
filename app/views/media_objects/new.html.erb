@@ -1,0 +1,34 @@
+<div class="container site-inner show">  
+	
+	<%= form_for @media_object do |f| %>
+		<div class="field">
+			<%= f.label :image %><br>
+			<%= f.file_field :image %>
+		</div>
+
+		<div class="field">
+			<%= f.label :video %><br>
+			<%= f.text_field :video %>
+		</div>
+
+	  <div class="field">
+	    <%= f.label :caption %><br>
+	    <%= f.text_field :caption %>
+	  </div>
+
+	  <div class="field">
+	  	<%= f.label :featured %>
+		  <%= f.check_box :featured  %>
+		</div>
+
+		<%= f.hidden_field :work_id, value: @work.id %>
+
+	  <div class="actions">
+	    <%= f.submit "Create", class: "button button-blue" %>
+	    <%= link_to 'Cancel', edit_work_path(@work) %>
+	  </div>
+
+	<% end %>
+
+	<div class="push"></div>
+</div>
