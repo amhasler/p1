@@ -1,14 +1,14 @@
 <header>
 	<div class="container">
 		<div class="title-area">
-			<a id="logo">page one</a>
+			<a id="logo" href="http://www.projectpageone.com/">page one</a>
 		</div>
 		<nav>
 			<ul>
-				<li><a id="canon">the canon</a></li>
-				<li><a>about</a></li>
-				<li><a>blog</a></li>
-				<li><a>contact</a></li>
+				<li><%= link_to 'the canon', works_path, id: "canon" %></li>
+				<li><a href="http://www.projectpageone.com/about-page-one/">about</a></li>
+				<li><a href="http://www.projectpageone.com/page-one-blog/">blog</a></li>
+				<li><a href="http://www.projectpageone.com/contact/">contact</a></li>
 				<% if user_signed_in? %>
 	  			<li>
 	  				<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
