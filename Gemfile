@@ -14,6 +14,7 @@ gem 'turbolinks',   '2.3.0'
 gem 'jbuilder',     '2.2.3'
 gem 'devise'
 gem 'geocoder'
+gem 'dotenv-rails', :groups => [:development, :test]
 gem "font-awesome-rails"
 gem 'acts-as-taggable-on', '~> 3.4'
 gem 'sdoc',         '0.4.0', group: :doc
