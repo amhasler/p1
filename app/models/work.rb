@@ -13,7 +13,7 @@ class Work < ActiveRecord::Base
 	validates :min_year, presence: true, length: { maximum: 5}
 	validates :place, presence: true
 
-	default_scope -> { order('created_at ASC') }
+	default_scope -> { order('min_year ASC') }
 
 	def featured_image
 		return self.media_objects.where(featured: true).first
