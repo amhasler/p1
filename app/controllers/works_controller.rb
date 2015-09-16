@@ -96,7 +96,7 @@ class WorksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def work_params
-      params.require(:work).permit(:title, :min_year, :max_year, :circa, :place, :latitude, 
+      params.require(:work).permit(:title, :min_year, :max_year, :circa, :place, :latitude, :is_title,
         :longitude, :creator_list, :location_list, :language_list, :period_list, :medium_list, :why)
     end
 

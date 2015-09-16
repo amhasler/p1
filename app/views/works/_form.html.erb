@@ -16,6 +16,10 @@
     <%= f.text_field :title %>
   </div>
   <div class="field">
+    <%= f.label :is_title %>
+    <%= f.check_box :is_title, class: "checkbox"  %>
+  </div>
+  <div class="field">
     <%= f.label :min_year %><br>
     <%= f.number_field :min_year %>
   </div>

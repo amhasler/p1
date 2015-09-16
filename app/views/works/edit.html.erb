@@ -25,7 +25,9 @@
 	    </div>
 	    <div class="fields">
 		    <%= f.text_field :title, class: "full" %>
-		    <br /> 
+		    <%= f.label :is_title %>
+		    <%= f.check_box :is_title, class: "checkbox"  %>
+		    <br />
 
 		    <%= f.number_field :min_year, placeholder: "min year" %>
 

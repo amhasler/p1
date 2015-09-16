@@ -19,7 +19,11 @@
         <%= image_tag @work.featured_image.image.url.to_s %>
       <% end %>
     </div>
-    <h2><%= @work.title %></h2>
+    <% if @work.is_title %>
+      <h2><i><%= @work.title %></i></h2>
+    <% else %>
+      <h2><%= @work.title %></h2>
+    <% end %>
     <h3><%= happy_date(@work.min_year,@work.max_year,@work.circa) %></h3>
   </div>
 
